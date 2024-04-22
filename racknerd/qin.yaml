@@ -85,68 +85,15 @@ dns:
       - 0.0.0.0/32
 
 proxies:
-  proxies:
-    - {"name":"美国 ws+tls","type":"vmess","server":"www.tonymoses.xyz","port":443,"cipher":"auto","uuid":"a5dc505f-e2a4-4bca-e924-e80f4ba6992d","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/a5dc505f","headers":{"host":"www.tonymoses.xyz"}}}
-    - {"name":"美国 ws","type":"vmess","server":"www.tonymoses.xyz","port":555,"cipher":"auto","uuid":"5f5e8dbd-b240-47d2-b37c-8d8457c2157f","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/5f5e8dbd"}}
+  - {"name":"美国 ws+tls","type":"vmess","server":"www.tonymoses.xyz","port":443,"cipher":"auto","uuid":"a5dc505f-e2a4-4bca-e924-e80f4ba6992d","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/a5dc505f","headers":{"host":"www.tonymoses.xyz"}}}
+  - {"name":"美国 ws","type":"vmess","server":"www.tonymoses.xyz","port":555,"cipher":"auto","uuid":"5f5e8dbd-b240-47d2-b37c-8d8457c2157f","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/5f5e8dbd"}}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - 美国 vmess+ws
-  - name: ♻️ 自动选择
-    type: url-test
-    url: http://www.gstatic.com/generate_204
-    interval: 300
-    tolerance: 50
-    proxies:
-      - 美国 vmess+ws
-  - name: 🌍 国外媒体
-    type: select
-    proxies:
-      - 🚀 节点选择
-      - ♻️ 自动选择
-      - 🎯 全球直连
-      - 美国 vmess+ws
-  - name: 📲 电报信息
-    type: select
-    proxies:
-      - 🚀 节点选择
-      - 🎯 全球直连
-      - 美国 vmess+ws
-  - name: Ⓜ️ 微软服务
-    type: select
-    proxies:
-      - 🎯 全球直连
-      - 🚀 节点选择
-      - 美国 vmess+ws
-  - name: 🍎 苹果服务
-    type: select
-    proxies:
-      - 🚀 节点选择
-      - 🎯 全球直连
-      - 美国 vmess+ws
-  - name: 🎯 全球直连
-    type: select
-    proxies:
-      - DIRECT
-      - 🚀 节点选择
-      - ♻️ 自动选择
-  - name: 🛑 全球拦截
-    type: select
-    proxies:
-      - REJECT
-      - DIRECT
-  - name: 🍃 应用净化
-    type: select
-    proxies:
-      - REJECT
-      - DIRECT
-  - name: 🐟 漏网之鱼
-    type: select
-    proxies:
-      - 🚀 节点选择
-      - 🎯 全球直连
-      - ♻️ 自动选择
-      - 美国 vmess+ws
+      - 美国 ws+tls
+      - 美国 ws
+      
+
