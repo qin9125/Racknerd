@@ -287,8 +287,6 @@ function operator(pro) {
     }
   });
   pro = pro.filter((e) => e.name !== null);
-  // jxh(pro);
-  // numone && oneP(pro);
   blpx && (pro = fampx(pro));
   key && (pro = pro.filter((e) => !keyb.test(e.name)));
   return pro;
